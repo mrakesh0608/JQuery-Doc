@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <title>JQ</title>
+</head>
+
+<body>
+    <!-- page1 -->
+    <div data-role="page" id="page1">
+        <div data-role="header">
+            <h1>Page1</h1>
+        </div>
+        <div data-role="main" class="ui-content">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero odio sint facere nihil atque consequatur!</p>
+            <a href="#page2">Go to Page 2</a><br>
+            <a href="external.html">Open External Page</a><br>
+            
+            <a href="#dialog_1">Open Dialog</a><br>
+            
+            <a href="#transition">Transitions</a><br>
+            <a href="#button">Buttons</a><br>
+            <a href="#icons">Icons</a>
+        </div>
+        <div data-role="footer">
+            <h5>Footer</h5>
+        </div>
+    </div>
+    <!-- page2 -->
+    <div data-role="page" id="page2">
+        <div data-role="header">
+            <h1>Page2</h1>
+        </div>
+        <div data-role="main" class="ui-content">
+            <a href="#page1">Go to Page 1</a>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum ea explicabo ullam beatae, nemo placeat
+                laborum sit voluptatem quam perferendis!</p>
+        </div>
+        <div data-role="footer">
+            <h5>Footer</h5>
+        </div>
+    </div>
+    <!-- dialog -->
+    <div data-role="page" data-dialog="true" id="dialog_1">
+        <div data-role="header">
+            <h1>Dialog Page</h1>
+        </div>
+        <div data-role="main" class="ui-content">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum ea explicabo ullam beatae, nemo placeat
+                laborum sit voluptatem quam perferendis!</p>
+            <a href="#page2">Go to Page 2</a>
+        </div>
+        <div data-role="footer">
+            <h5>Footer</h5>
+        </div>
+    </div>
+    <!-- transition -->
+    <div data-role="page" id="transition">
+        <div data-role="header">
+            <h1>Transiton</h1>
+        </div>
+        <div data-role="main" class="ui-content">
+            <p>(case-sensitive) <br><br>Go to page 1 with transiton </p>
+            <a href="#page1" data-transition="fade">Fade (default)</a><br>
+            
+            <a href="#page1" data-transition="none">None</a><br> 
+            <a href="#page1" data-transition="flow">Flow</a><br> 
+            <a href="#page1" data-transition="flip">Flip</a><br>
+            <a href="#page1" data-transition="pop">Pop</a><br>
+            <a href="#page1" data-transition="turn">Turn</a><br>
+            <br>
+            <a href="#page1" data-transition="slide">Slide</a><br>
+            <a href="#page1" data-transition="slideup">Slide-Up</a><br>
+            <a href="#page1" data-transition="slidedown">Slide-down</a><br>
+            <a href="#page1" data-transition="slidefade">Slide-Fade</a><br>
+            
+            <a href="#page1" data-transition="slide" data-direction="reverse">Reverse Slide</a><br>
+
+            <br><a href="#dialog_1" data-transition="flow">Open Dialog with flow</a><br>
+        </div>
+        <div data-role="footer">
+            <h5>Footer</h5>
+        </div>
+    </div>
+    <!-- button -->
+    <div data-role="page" id="button">
+        <div data-role="header">
+            <h1>Buttons</h1>
+        </div>
+        <div data-role="main" class="ui-content">
+            <p>Buttons automatically styled</p>
+            <input type="button" value="Btn 1">
+            <input type="button" value="Btn 1" class="ui-btn">
+
+            <button>Btn 2</button>
+            <button class="ui-btn">Btn 2</button>
+
+            <a href="#page1" class="ui-btn">Go to Page1 using a tag</a>
+            
+            <hr>
+            <p>Vertical Group (default)</p>
+            <div data-role="controlgroup" data-type="vertical">
+                <a href="#page1" class="ui-btn">Page 1</a>
+                <a href="#page2" class="ui-btn">Page 2</a>
+                <a href="#page3" class="ui-btn">Page 3</a>
+            </div>
+            
+            <hr>
+            <p>Horizontal Group</p>
+            <div data-role="controlgroup" data-type="horizontal">
+                <a href="#page1" class="ui-btn">Page 1</a>
+                <a href="#page2" class="ui-btn">Page 2</a>
+                <a href="#page3" class="ui-btn">Page 3</a>
+            </div>
+            
+            <hr>
+            <p>Back Button - it ignores href value</p>
+            <a href="" class="ui-btn" data-rel="back">Go Back</a>
+            
+            <hr>
+            <p>Inline Button - upto content. (by default btn tak full width of screen)</p>
+            <a href="#page1" class="ui-btn ui-btn-inline">Page 1</a>
+            <a href="#page2" class="ui-btn ui-btn-inline">Page 2</a>
+            
+            <hr>
+            <p>default color is gray with black text</p>
+            <a href="#page1" class="ui-btn ui-btn-b">Page 1</a>
+            <a href="#page2" class="ui-btn ui-corner-all">Page 2</a>
+            <a href="#page1" class="ui-btn ui-mini">Page 1</a>
+            <a href="#page2" class="ui-btn ui-shadow">Page 2</a>
+        </div>
+        <div data-role="footer">
+            <h5>Footer</h5>
+        </div>
+    </div>
+    <div data-role="page" id="icons" data-theme="b">
+        <div data-role="header">
+            <h1>Icons</h1>
+        </div>
+        <div data-role="main" class="ui-content">
+            <p>use the ui-icon class <br><br>position the icon with an icon position class (ui-btn-icon-pos)</p>
+
+            <a href="" class="ui-btn ui-icon-arrow-l ui-btn-icon-left">Left Arrow</a>
+            <a href="" class="ui-btn ui-icon-arrow-r ui-btn-icon-right">Right Arrow</a>
+            <a href="" class="ui-btn ui-icon-info ui-btn-icon-top">Info.</a>
+            <a href="" class="ui-btn ui-icon-delete ui-btn-icon-bottom">Delete</a>
+            <a href="" class="ui-btn ui-icon-back ui-btn-icon-left">Back</a>
+            <a href="" class="ui-btn ui-icon-audio ui-btn-icon-left">Audio</a>
+            <a href="" class="ui-btn ui-icon-lock ui-btn-icon-left">Lock</a>
+            <a href="" class="ui-btn ui-icon-search ui-btn-icon-left">Search</a>
+            <a href="" class="ui-btn ui-icon-alert ui-btn-icon-left">Alert</a>
+            <a href="" class="ui-btn ui-icon-grid ui-btn-icon-left">Grid</a>
+            <a href="" class="ui-btn ui-icon-home ui-btn-icon-left">Home</a>
+            
+            <hr>
+            <p><b>issue</b> - don't specify the icon position for link buttons, the icon will not be shown.</p>
+            <a href="" class="ui-btn ui-btn-icon-left">Left Arrow</a>
+            <a href="" class="ui-btn ui-icon-arrow-r">Right Arrow</a>
+            <a href="" class="ui-btn ui-icon-info ui-btn-icon-top"></a>
+
+            <hr>
+            <p>Displaying Only The Icon</p>
+            <a href="" class="ui-btn ui-icon-home ui-btn-icon-notext">Home</a>
+
+            <hr>
+            <p><b>Removing The Circle -</b> use "ui-nodisc-icon", (By default, all icons have a gray circle (disc) around them)</p>
+            <a href="" class="ui-btn ui-icon-home ui-btn-icon-left">Home with Circle</a>
+            <a href="" class="ui-btn ui-icon-home ui-btn-icon-left ui-nodisc-icon">Home w/o Circle</a>
+
+            <hr>
+            <p>By default icons are white</p>
+            <a href="" class="ui-btn ui-btn-inline ui-icon-search  ui-corner-all ui-btn-icon-notext">Search</a>
+            
+            <hr>
+            <p> icon color to black use "ui-alt-icon"</p>
+            <a href="" class="ui-btn ui-btn-inline ui-btn-icon-left ui-icon-search  ui-corner-all ui-alt-icon">Search</a>
+            <a href="" class="ui-btn ui-btn-inline ui-icon-search  ui-corner-all ui-btn-icon-notext ui-alt-icon">Search</a>
+            
+            <hr>
+            <p> icon without the gray circle (combining "ui-nodisc-icon" & "ui-alt-icon"):</p>
+            <a href="" class="ui-btn ui-btn-inline ui-btn-icon-left ui-icon-search  ui-corner-all ui-alt-icon ui-nodisc-icon">Search</a>
+            <a href="" class="ui-btn ui-btn-inline ui-icon-search  ui-corner-all ui-btn-icon-notext ui-alt-icon ui-nodisc-icon">Search</a>
+
+        </div>
+        <div data-role="footer">
+            <h6>Footer</h6>
+        </div>
+    </div>
+</body>
+
+</html>
